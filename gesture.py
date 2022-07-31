@@ -5,6 +5,7 @@ class Gesture:
         self.loses_to = [loses1, loses2]
 
     def does_it_win(self, opponent_gesture, player_1, player_2):
+        print('')
         if opponent_gesture.name in self.wins_against:
             print(f'{player_1.name} wins')
             player_1.win_counter += 1

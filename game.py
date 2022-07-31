@@ -55,6 +55,7 @@ class Game:
     def one_round(self):
         self.player_1.choose_gesture()
         self.player_2.choose_gesture()
+        print('')
         print(f'{self.player_1.name} used {self.player_1.active_gesture.name}')
         print(f'{self.player_2.name} used {self.player_2.active_gesture.name}')
         self.player_1.active_gesture.does_it_win(self.player_2.active_gesture, self.player_1, self.player_2)
@@ -77,7 +78,8 @@ class Game:
         self.choose_players()
         while self.player_1.win_counter < 2 and self.player_2.win_counter < 2:
             self.one_round()
+        print('')
         if self.player_1.win_counter > self.player_2.win_counter:
-            print(f'Congratulations to {self.player_1.name} for winning!')
+            print(f'Congratulations to {self.player_1.name} for winning 2 out of 3!')
         else:
-            print(f'Congratulations to {self.player_2.name} for winning!')
+            print(f'Congratulations to {self.player_2.name} for winning 2 out of 3!')
