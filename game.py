@@ -32,6 +32,7 @@ class Game:
 
     def choose_players(self):
         user_input = ''
+        print('')
         while user_input != '1' and user_input != '2' and user_input != '3':
             user_input = input('Enter 1 for one player, 2 for two players, or 3 to spectate').lower()
             if user_input == '1':
